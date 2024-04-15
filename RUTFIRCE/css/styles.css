@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lemon&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Rubik:wght@600&display=swap');
+/*RESET*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN ESTILOS*/
+html,
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 2,5rem;
+}
+
+h2{
+    font-size: 2rem ;
+    font-family: 'Roboto', uppercase ;
+}
+
+h3{
+    font-size: 1,75rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+h5{
+    font-size: 1,25rem;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.7em;
+    padding: 0 30px;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: none;
+    align-items: center;
+}
+
+.btn-dark{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    
+}
+
+/*NAVBAR*/
+
+.navbar{
+    padding: 25px 0;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-brand{
+    color:#000;
+}
+
+.navbar ul{
+    display: flex;
+    padding: 10px 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    padding: 20px 10px;
+}
+
+.navbar ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+}
+
+/*fotos*/
+.galeria-fotos{
+    width: 100%;
+    height: 100%; 
+}
+.galeria-jeans{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-1{
+    padding: 1em;
+}
+.card-2{
+    padding: 1em;
+    
+}
+.card-3{
+    padding: 1em;
+}
+
+.buzos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-1{
+    padding: 1em;
+}
+.card-2{
+    padding: 1em;
+    
+}
+.card-3{
+    padding: 1em;
+}
+
+

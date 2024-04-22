@@ -20,10 +20,11 @@ alert("Esperamos que disfrutes la recorrida por nuestro sitio web, estamos a las
 
 //----------------------------------------------------------
 
-const prendajeans1 = "Jeans Wide Leg Recto";
-const prendajeans2 = "Jeans Chupin";
-const prendajeans3 = "Jeans Wide Leg";
+let prendajeans1 = "Jeans Wide Leg Recto";
+let prendajeans2 = "Jeans Chupin";
+let prendajeans3 = "Jeans Wide Leg";
 
+const tienda = "RutFirce"
 //---------------------------------------------------------
 
 //arrays

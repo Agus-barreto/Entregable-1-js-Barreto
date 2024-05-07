@@ -1,49 +1,35 @@
-// Simulador de tienda de ropa web
-// Log in
-
-const pedirMail = prompt ("Registrate con tu mail para no perderte nuestras imperdibles ofertas.")
-console.log(pedirMail)
-console.log(typeof pedirMail)
-
-function solicitarNombreyApellido() {
-    const nombreyapellidoIngresado = prompt("Ingrese su Nombre y Apellido")
-    alert("Bienvenido/a " + nombreyapellidoIngresado)
-}
-solicitarNombreyApellido()
-    
-
-const pedirsiono = confirm("Si sigues estas aceptando los terminos y condiciones.")
+const pedirsiono = confirm("¿Querés estar día con nuestras novedades?.")
 console.log(pedirsiono)
 console.log(typeof pedirsiono)
 ingreso=true
-alert("Esperamos que disfrutes la recorrida por nuestro sitio web, estamos a las ordenes!")
 
-//----------------------------------------------------------
+//------------------------------------------------------------
 
-let prendajeans1 = "Jeans Wide Leg Recto";
-let prendajeans2 = "Jeans Chupin";
-let prendajeans3 = "Jeans Wide Leg";
+//Login
 
-const tienda = "RutFirce"
-//---------------------------------------------------------
+const fondo = document.querySelector(".fondo");
+const loginlink =document.querySelector(".login-link");
+const registrarlink= document.querySelector(".registar-link");
+const btn = document.querySelector(".btn-I");
+const iconocerrar = document.querySelector(".icono-cerrar");
 
-//arrays
-const productos = [prendajeans1,prendajeans2]
-console.log(productos)
+registrarlink.addEventListener("click", () => {
+    fondo.classList.add('active');
+});
 
-productos.push(prendajeans3)
-console.log(productos)
+loginlink.addEventListener("click", () => {
+    fondo.classList.remove('active');
+});
 
-for (let i = 0; i < productos.length; i++){
-    console.log(productos[i])
-}
-//----------------------------------------------------------
- 
-//funcion 
+btn.addEventListener("click", () => {
+    fondo.classList.add('active-btn-I');
+});
 
-const IVA = 0.22 
-const IVAenprendas = precio => precio*IVA
+iconocerrar.addEventListener("click", () => {
+    fondo.classList.remove('active-btn-I')
+});
 
-const jeanschupin = IVAenprendas(1200)
+//-----------------------------------------------------------------------
 
-console.log(jeanschupin)
+
+

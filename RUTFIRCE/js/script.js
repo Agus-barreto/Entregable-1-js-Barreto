@@ -1,35 +1,71 @@
-const pedirsiono = confirm("¿Querés estar día con nuestras novedades?.")
-console.log(pedirsiono)
-console.log(typeof pedirsiono)
-ingreso=true
+const carrito = document.getElementById("carrito");
+const elementos1 = document.getElementById("lista-1");
+const lista = document.querySelector("#lista-carrito tbody");
+const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
 
-//------------------------------------------------------------
+cargarEventListeners();
 
-//Login
+function cargarEventListeners(){
+    elementos1.addEventListener("click", comprarElemento);
+    carrito.addEventListener("click", eliminarElemento);
+    vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+}
 
-const fondo = document.querySelector(".fondo");
-const loginlink =document.querySelector(".login-link");
-const registrarlink= document.querySelector(".registar-link");
-const btn = document.querySelector(".btn-I");
-const iconocerrar = document.querySelector(".icono-cerrar");
+function comprarElemento(e){
+    e.preventDefault();
+    if(e.target.classList.contains("agregar-carrito")){
+        const elemento = e.target.parentElement.parentElement;
+        leerDatosElemento(elemento);
+    }
+}
 
-registrarlink.addEventListener("click", () => {
-    fondo.classList.add('active');
-});
+function leerDatosElemento(elemento){
+    const infoElemento = {
+        imagen: elemento.querySelector("img").src,
+        titulo: elemento.querySelector("h3").textContent,
+        precio: elemento.querySelector(".precio").textContent,
+        id: elemento.querySelector("a").getAttribute("data-id")
+    }
+    insertarCarrito(infoElemento);
+}
 
-loginlink.addEventListener("click", () => {
-    fondo.classList.remove('active');
-});
+function insertarCarrito(elemento){
+    const row = document.createElement("tr");
+    row.innerHTML = `
+    <td>
+    <img src="${elemento.imagen}"width=100>
+    </td>
+    <td>
+    ${elemento.titulo}
+    </td>
+    <td>
+    ${elemento.precio}
+    </td>
+    <td>
+    <a herf="#" class="borrar" data-id="${elemento.id}"> X </a>
+    </td>
+    `;
+lista.appendChild(row);
+}
 
-btn.addEventListener("click", () => {
-    fondo.classList.add('active-btn-I');
-});
+function eliminarElemento(e){
+    e.preventDefault();
+    let elemento,
+        elementoId;
+    if (e.target.classList.contains('borrar')){
+        e.target.parentElement.parentElement.remove();
+        elemento = e.target.parentElement.parentElement;
+        elementoId = elemento.querySelector('a').getAttribute('data-id');
+    }
+}
 
-iconocerrar.addEventListener("click", () => {
-    fondo.classList.remove('active-btn-I')
-});
+function vaciarCarrito(){
+    while(lista.firstChild){
+        lista.removeChild(lista.firstChild);
+    }
+    return false;
+}
 
-//-----------------------------------------------------------------------
 
-
-
+//-------------------------------------------------
+s

@@ -1,3 +1,4 @@
+//Carrito , listado de productos , suma de productos , resta de productos , precio total y vaciado
 const carrito = document.getElementById("carrito");
 const elementos1 = document.getElementById("lista-1");
 const lista = document.querySelector("#lista-carrito tbody");
@@ -81,5 +82,17 @@ function vaciarCarrito(){
     return false;
 }
 
+const finalizarCompraButton = document.querySelector(".finalizarCompraButton");
+finalizarCompraButton.addEventListener("click", => console.log ("click"));
+
+function finalizarCompra(){
+    finalizarComprabtn.addEventListener("click", finalizarCompra);
+    itemsCarrito = [];
+    precioTotal ();
+    visulizarProductos();
+    localStorage.setItem("carrito",JSON.stringify(itemsCarrito))
+}
 
 //-------------------------------------------------
+
+//inicio de sesion 

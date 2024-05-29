@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
 /*RESET*/
 * {
@@ -11,8 +13,12 @@
 
 /* MAIN ESTILOS*/
 html,
-body{
-    font-family: "Poppins", sans-serif;
+body{ 
+    font-family: "Teachers", sans-serif;
+    
+}
+h5{
+    font-family: "Roboto", sans-serif; 
 }
 img{
     max-width: 100%;
@@ -30,43 +36,52 @@ img{
     display:block;
     background-size: cover;
 }
-.menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.navbar{
+    height: 100px;
+}
+.navbar a {
+    color: #181713;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+}
+.navbar .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
-.logo{
-    color: black;
-    font-size: 25px;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-decoration: none;
+.navbar ul{
+    display: flex;
+    padding-left: 100vh;
 }
-.menu .navbar ul li{
-    position: relative;
-    float: left;
+.navbar ul li {
+    margin-left: 20px;
 }
-.menu .navbar ul li a{
-    font-size: 18px;
-    padding: 15px;
-    color: black;
-    display: block;
-    font-weight: 600;
-    text-decoration: none;
-}
-#menu{
-    display: none;
-}
-.menu-icono{
-    width: 25px;
-}
-.menu label{
-    cursor: pointer;
-    display: none;
-}
+
+    #logo{
+        color: black;
+        font-family: "Freeman", sans-serif;
+        font-size: 40px;
+        text-decoration: none;
+    }
+
+    
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu label{
+        cursor: pointer;
+        display: none;
+    }
+
+
+
 .submenu{
     position: relative;
 }
@@ -74,7 +89,7 @@ img{
     display: none;
 }
 .submenu:hover #carrito{
-    display: block;
+    display:block;
     position: absolute;
     right: 0;
     backdrop-filter: blur(10px);
@@ -126,17 +141,63 @@ p{
     text-transform: capitalize;
 }
 /*Home*/
+
+.product{
+    padding: 0 0 100px 0;
+    text-align: center;
+}
 .product-content-2{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
-    padding: 50px;
+    padding: 30px;
 }
 .product{
     text-align: center;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     padding: 50px;
 }
+
+.product img{
+width: 150px;
+height: 200px;
+margin-bottom: 10px;
+}
+.Parrafo{
+    background-color: black;
+    color: white;
+    font-family: "Teachers", sans-serif;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0 10px;
+}
+
+#contact .flex{
+    gap:50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #9191bd;
+    color: black;
+    font-family: "Roboto", sans-serif;
+}
+.flex{
+    display: flex;
+    gap: 30px;
+    font-family: "Teachers", sans-serif;
+}
+.flecha{
+    padding-bottom: 20px;
+}
+
+#foto{
+    background: url(../img/img-nosnotro.jpg);
+    background-repeat: no-repeat;
+    height: 80vh;
+    align-items: center;
+    display:block;
+    background-size: cover;
+}
+
 
 
 /*Catalogo*/
@@ -225,16 +286,17 @@ input{
     background-color: #4E4B5076;
 }
 
-.footer{
-    padding: 50px 0;
-    background-color: black;
+footer{
+    margin-top: auto;
+    box-shadow: 0 -3px 5px rgb(0, 0, 0, 0.104);
+    text-align: center;
+    padding: 30px;
+    background-color: #9191bd;
+    }
+.redes{
+    padding: 20px;
+    padding-top: 20px;
 }
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-}
-
 .link h3{
     color: #9BA986;
     font-size: 17px;
@@ -260,27 +322,95 @@ input{
     text-align: center;
 }
 
+/*Contacto*/
+.Inicio-Sesion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.container-form{
+    max-width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px #CECECE;
+    transition: all 1s ease;
+    margin: 10px;
+}
 
-@media(max-width:991px){
-    .menu{
-        padding: 30px;
-    }
-    .menu label{
-        display: initial;
-    }
-    .menu .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color:#303030;
-        display: none;
-    }
-    .menu .navbar ul li{
+.information{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color:#8f2daad0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-childs{
     width: 100%;
-    }
-    .menu .navbar ul li a{
-        color:aliceblue
-    }
+    padding: 0 30px;
+}
+.info-childs h2{
+    font-size: 2.5rem;
+}
+.info-childs p{
+    margin: 15px 0;
+    color: #181713;
+}
+.info-childs input{
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #9191bd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #303030;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.info-childs input:hover{
+    background-color: #303030;
+    border: none;
+    color: #fff;
+    box-shadow:0 2px 5px  #CECECE;
+}
+
+
+.form-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-childs{
+    padding: 0 30px;
+    border: solid thin red;
+    height: 50vh;
+    width: 50vh;
+}
+.celda-1{
+    height: 10vh;
+    width: 20vh;
+    display: flex;
+    padding-top: 20px;
+}
+.celda-2{
+    height: 20vh;
+    right: 10vh;
+    padding: right 90px;
+    display: flex;
+    padding-top: 100px;
     
+}
+.hide{
+    position: absolute;
+    transform: translate(-300%);
 }

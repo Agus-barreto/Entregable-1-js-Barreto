@@ -4,19 +4,6 @@ document.getElementById("btnRedireccionar").addEventListener("click", function()
     window.location.href = "../pages/carrito.html";
 })
 
-document.getElementById("comprar").addEventListener("click", function(){
-    window.out;
-})
-
-document.getElementById('purchaseForm').addEventListener('submit', function(event) {
-    e.preventDefault();
-    if(e.target.classList.contains("comprar")){
-        ealse
-    }
-    Compra.addEventListener('click', function() {
-        // Mostrar el mensaje de agradecimiento
-        alert('¡Gracias por tu compra!');
-    });
 
     // Validar campos (ejemplo de validación simple)
     const name = document.getElementById('name').value;

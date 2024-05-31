@@ -4,88 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css" >
-    <script async src="../js/funciones.js"></script>
+    <script async src="../js/script.js"></script>
+    <script async src="../js/registro.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Contacto</title>
 </head>
-<div class="Inicio-Sesion">
-    <div class="container-form">
-        <div class="information">
-            <div class="info-childs">
-                <h2>Bienvenido</h2>
-                <p>Para no perderte ninguno de nuestros ingresos y descuentos Inicia Sesion con tus datos! </p>
-                <input type="button" value="Inicia Sesion" id="sign-in">
+<body>
+    <header class="header">
+    <div class="menu container">
+        <a href="index.html" id="logo">RutFirce</a>
+        <nav class="navbar">
+            <div class="container">
+            <ul>
+                <li> <a href="../index.html">Home</a></li>
+                <li><a href="../pages/catalogo.html">Catalogo</a></li>
+                <li><a href="../pages/contacto.html">Inicio/Registro</a></li>
+                <li><a href="../pages/carrito.html">Carrito</a></li>
+            </ul>
             </div>
-        </div>
-        <div class="form-information">
-            <div class="form-information-childs">
-                <h2>Crear una cuenta</h2>
-                <div class="icons">
-                    <i class='bx bxl-google' ></i>
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-                <p>O usa tu email para registarte</p>
-                <form>
-                    <label  class="celda-1">
-                        <i class='bx bx-user' ></i>
-                        <input type="text" placeholder="Nombre Completo">
-                    </label>
-                    <label class="celda-2" >
-                        <i class='bx bx-envelope' ></i>
-                        <input type="email" placeholder="Correo Electronico">
-                    </label>
-                    <label  class="celda-3">
-                        <i class='bx bx-lock-alt' ></i>
-                        <input type="password" placeholder="Contraseña">
-                    </label>
-                    <div class="btn">
-                        <input type="submit"  value="Registarse">
-                    </div>
-                    
-                </form>
+    </nav>
+
+    <div>
+        <ul>
+            <li class="submenu">
+                <img src="../img/img-bag.svg"id="menu-carrito" alt="carrito">
+                <div id="carrito">
+                <table id="lista-carrito">
+                <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="total">
+                <thead>
+                <tr>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td id="preciototal"></td>
+                </tr>
+                </thead>
+            </table>
+            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+
+            <a href="#" id="finalizar-compra" class="btn-2">Finalizar Compra</a>
             </div>
-        </div>
-    </div>
-
-</div>
-
-
-
-<div class="Inicio-Sesion">
-    <div class="container-form hide">
-        <div class="information">
-            <div class="info-childs">
-                <h2>Bienvenido a RutFirce</h2>
-                <p>Si aun no tienes una cuenta por favor registrate haciendo click aqui </p>
-                <input type="button" value="Registrarse" id="sign-up">
-            </div>
-        </div>
-        <div class="form-information">
-            <div class="form-information-childs">
-                <h2>Iniciar Sesión</h2>
-                <div class="icons">
-                    <i class='bx bxl-google' ></i>
-                    <i class='bx bxl-facebook-circle' ></i>
-                </div>
-                <p>O inicia sesión con una cuenta</p>
-                <form>
-                    <label class="celda-2" >
-                        <i class='bx bx-envelope' ></i>
-                        <input type="email" placeholder="Correo Electronico">
-                    </label>
-                    <label  class="celda-3">
-                        <i class='bx bx-lock-alt' ></i>
-                        <input type="password" placeholder="Contraseña">
-                    </label>
-                    <div class="btn">
-                        <input type="submit"  value="Iniciar Sesión">
-                    </div>
-                    
-                </form>
-            </div>
+            </li>
+        </ul>
+        </div> 
         </div>
     </div>
+</header>
 
+<div class="formulario-inicio">
+<div class="Inicio-Sesion">
+    <h2>Bienvenido!!!</h2>
+    <p class="parrafo-i">
+    Te recomendamos que inicies sesión para poder relaizar compras y para que te lleguen las notificaciones sobre nuestros nuevos ingresos , descuentos y más</p>
+    <form>
+        <div class="email">
+            <label for="exampleInputEmail1" class="form-label"> Correo Electrónico.</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        </form>
+        <form>
+            <div class="password">
+                <label for="exampleInputPassword1" id="password">Ingrese su Contraseña </label>
+                <input type="password" class="form-control" id="password">
+            </div>
+        </form>
+        <a href="#" id="Iniciar Sesion" class="btn-2">Iniciar Sesión</a>
 </div>
-</html>
+
+<div class="registro" id="Formulario-compras">
+    <h2>REGISTARSE</h2>
+    <p class="parrafo-i"> ¿Aún no te has registrado? , completa con tus datos y acepta los terminos y condiciones! </p>
+    <form>
+    <div class="name">
+        <label for="name" class="name"> Nombre y Apellido</label>
+        <input type="email" class="form-control" id="exampleemial" aria-describedby="emailHelp">
+    </div>
+    </form>
+    <form>
+        <div class="last-name">
+            <label for="exampleInputPassword1" class="last-name">Direccion de Correo Electónico </label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+    </form>
+    <form>
+        <div class="email">
+            <label for="email" class="email">Contraseña</label>
+            <input type="email" class="form-control" id="exampleInputPassword1">
+        </div>
+    </form>
+    <form>
+        <div class="password">
+            <label for="Password" class="password">Direccion</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+    </form>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" >
+        <label class="form-check-label" for="disabledFieldsetCheck">
+            <p class="parrafo-c">Tus datos personales se utilizaran solo para procesar tu pedido, y mejorar tu experiencia en nuestra web!</p> 
+        </label>
+    </div>
+    <a href="#" id="Iniciar Sesion" class="btn-2">Crear Cuenta</a>
+    </div>
+</div>

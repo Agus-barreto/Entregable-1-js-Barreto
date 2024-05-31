@@ -1,5 +1,3 @@
-
-
 const carrito = document.getElementById("carrito");
 const elementos1 = document.getElementById("lista-1");
 const lista = document.querySelector("#lista-carrito tbody");
@@ -17,7 +15,7 @@ if(itemsGuardados) {
     }
     visulizarProductos();
 }
-
+//visualizar productos en carrito
 function visulizarProductos(){
     lista.innerHTML = ""
     for (let i in itemsCarrito) {
@@ -29,7 +27,7 @@ function visulizarProductos(){
     total.innerHTML = "$" + precioTotal;
 }
 
-
+// funcion de eliminar , agregar elementos al carrito
 cargarEventListeners();
 
 function cargarEventListeners(){
@@ -74,7 +72,7 @@ function eliminarElemento(e){
         localStorage.setItem("carrito", JSON.stringify(itemsCarrito));
     }
 }
-
+// vaciado del carrito
 function vaciarCarrito(){
     itemsCarrito = [];
     precioTotal = 0;

@@ -379,13 +379,13 @@ footer{
     padding-left: 60px;
     text-align: left;
 }
-.email{
+.email-1{
     padding: 5px;
     width: 60%;
-    padding-left: 60px;
+    padding-left: 50px;
     text-align: left;
 }
-.password{
+.password-1{
     padding: 5px;
     width: 60%;
     padding-left: 60px;
@@ -468,27 +468,9 @@ h3{
     border: none;
     border-radius: 80px;
 }
-.modal-content {
-    background-color: #ffffff84;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
-    border-radius: 8px;
-}
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+#button{
+    background: #9191bd62;
+    color: #181713;
 }
 
 
